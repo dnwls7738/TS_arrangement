@@ -1,5 +1,5 @@
-📌 Types of TS(part II)
-✅ readonly 사용하기
+### 📌 Types of TS(part II)
+## ✅ readonly 사용하기
 ``````
 type Player = {
     readonly name:string
@@ -17,7 +17,7 @@ const numbers: readonly number[] = [1, 2, 3, 4]
     ⇒ immutability(불변성) 부여
         but, javascript에서는 그냥 배열
 ``````
-✅ Tuple
+## ✅ Tuple
 정해진 개수와 순서에 따라 배열 선언
 ``````
 const player: [string, number, boolean] = ["nico", 1, true]
@@ -25,7 +25,7 @@ const player: [string, number, boolean] = ["nico", 1, true]
 ❗ readonly도 사용가능 ⇒ readonly [...] 형태
 
 
-✅ undefined, null, any
+## ✅ undefined, null, any
 any: 아무 타입
 undefined: 선언X 할당X
 null: 선언O 할당X
