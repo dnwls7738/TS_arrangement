@@ -1,9 +1,9 @@
-### 📌 Types of TS(기본)
-## ✅ 배열: 자료형[]
-## ✅ 숫자: number
-## ✅ 문자열: string
-## ✅ 논리: boolean
-## ✅ optional
+## 📌 Types of TS(기본)
+### ✅ 배열: 자료형[]
+### ✅ 숫자: number
+### ✅ 문자열: string
+### ✅ 논리: boolean
+### ✅ optional
 ``````
 const player : {
     name: string,
@@ -24,7 +24,7 @@ if(player.age && player.age < 10) {
 ``````
 ❗ ?를 :앞에 붙이면 optional
 
-## ✅ Alias(별칭) 타입
+### ✅ Alias(별칭) 타입
 ``````
 type Player = {
     name: string,
