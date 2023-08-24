@@ -1,12 +1,55 @@
-# Type Aliases
+📌 Types of TS(기본)
+✅ 배열: 자료형[]
+✅ 숫자: number
+✅ 문자열: string
+✅ 논리: boolean
+✅ optional
+``````
+const player : {
+    name: string,
+    age?:number
+} = {
+    name: "nico"
+}
+``````
+❌ player.age가 undefined일 가능성 알림
+``````
+if(player.age < 10) {
+}
+``````
+⭕ player.age가 undefined일 가능성 체크
+``````
+if(player.age && player.age < 10) {
+}
+``````
+❗ ?를 :앞에 붙이면 optional
 
-Type Aliases을 사용하여 객체 타입뿐만 아니라 모든 타입에 이름을 지정할 수 있습니다.
-```
-type Point = {
-x: number;
-y: number;
-};
-type ID = number | string;
-type UserInputSanitizedString = string;
-```
-https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-aliases
+✅ Alias(별칭) 타입
+``````
+type Player = {
+    name: string,
+    age?:number
+}
+
+const player : Player = {
+    name: "nico"
+}
+``````
+⭐ 함수에서는 어떻게 쓸까
+``````
+type Player = {
+    name: string,
+    age?:number
+}
+
+function playerMaker1(name:string) : Player {
+    return {
+        name
+    }
+}
+
+const playerMaker2 = (name:string) : Player => ({name})
+
+const nico = playerMaker1("nico")
+nico.age = 12
+``````
